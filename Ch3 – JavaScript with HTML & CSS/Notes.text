@@ -1,0 +1,18 @@
+document.getElementByID = Finds oen element by its ID
+
+doucment.getElementByClassName = Finds elements by ther class, returns a list
+
+querySelector = Finds the first element that matches a CSS selector
+
+
+Document.querySelector('#id-name') – referencing an id
+
+Document.querySelector('.class-name') – referencing a class
+
+Document.querySelectorAll('.class-name') – referencing a all the elements with the same class
+
+
+The whole point of all of this is to interact with or modify webpage elements  
+
+
+Script tag
