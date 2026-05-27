@@ -1,29 +1,64 @@
 let userInput = "";
-let cuInput = 0;
+let cuChoice = "";
+let randomNum = 0;
 
-const rock = document.querySelector("#rock-btn");
-const paper = document.querySelector("#paper-btn");
-const scissors = document.querySelector("#scissors-btn");
+randomNum = Math.floor(Math.random() * 3)
+
+let cuChoiceArray = ["🪨", "🧻", "✂️"];
+
+handleCuChoice(cuChoiceArray[randomNum]);
 
 
-function handleChoice(choice){
+
+
+const buttons = document.querySelectorAll(".player-input-btn"); // Get all buttons with the class "player-input-btn"
+
+
+
+
+buttons.forEach(function(btn, index) { // Loop through every button in the NodeList once
+    btn.addEventListener("click", function getBtnInfo(){
+        handleUserChoice(btn.textContent);
+
+    //  Attach a click listener to the current button
+
+    // This listener stays attached after the loop finishes
+    })
+})
+
+function handleUserChoice(choice){
     
     userInput = choice;
     console.log(userInput);
     
 }
 
-for(let i = 0; i < 3; i++){
+function handleCuChoice(choice){
+    cuChoice = choice;
+    console.log(cuChoice)
+}
+
+function gameLoop(userInput, cuInput){
+
+    let win;
+
     
+   
+
+    
+
 }
 
 
 
 
 
-
-
 /* 
+
+
+
+
+
 
 rock.addEventListener("click", function playerInputRock(){
 
