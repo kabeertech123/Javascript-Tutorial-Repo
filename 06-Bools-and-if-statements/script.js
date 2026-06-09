@@ -1,12 +1,8 @@
-let userInput = "";
-let cuChoice = "";
-let randomNum = 0;
-let gameLoop = true;
 let win = 0;
 let draw = 0;
 let loss = 0;
 
-randomNum = Math.floor(Math.random() * 3)
+let randomNum = Math.floor(Math.random() * 3)
 
 let cuChoiceArray = ["🪨", "🧻", "✂️"];
 
@@ -17,7 +13,8 @@ const buttons = document.querySelectorAll(".player-input-btn"); // Get all butto
 
 
 buttons.forEach(function(btn, index) { // Loop through every button in the NodeList once
-    btn.addEventListener("click", function getBtnInfo(){
+    btn.addEventListener("click", function getBtnInfo() {
+
         handleUserChoice(btn.textContent);
         handleCuChoice(cuChoiceArray[randomNum]);
         gameLoopFunction(userInput, cuChoice);
@@ -44,16 +41,16 @@ resetBtn.addEventListener("click", function resetScore(){
 function handleUserChoice(choice){
     
     userInput = choice;
-    console.log(userInput);
+    
     
 }
 
 function handleCuChoice(choice){
     cuChoice = choice;
-    console.log(cuChoice)
+    
 }
 
-function gameLoopFunction(userInput, cuChoice){
+function gameLoopFunction(){
 
     switch (userInput){
 
