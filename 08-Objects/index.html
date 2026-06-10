@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+       class quickSort{
+
+        constructor(items, pointer1, pointer2 , pivot) {
+            this.items = items;
+            this.pointer1 = pointer1;
+            this.pointer2 = pointer2;
+            this.pivot = pivot;
+        }
+
+
+        quickSortAlgorithm(items, pointer1, pointer2, pivot){
+
+            if (this.items <= 1){
+                return items;
+            }else{
+                while (this.pointer1 != this.pointer2){
+                    if(
+                    (
+                        this.items[this.pointer1] > this.items[this.pointer2] 
+                        && 
+                        this.pointer1 < this.pointer2)
+                    ||
+                    (
+                        this.items[this.pointer1] < this.items[this.pointer2] 
+                        && this.pointer1 > this.pointer2
+                    )
+                    ){
+                        let temp = this.items[this.pointer1];
+                        this.items[this.pointer1] = this.items[this.pointer2];
+                        this.items[this.pointer2] = temp;
+
+                        let temp_pointer = this.pointer1;
+                        this.pointer1 = this.pointer2;
+                        this.pointer2 = temp_pointer;
+
+                    
+                    }
+                    if(this.pointer1 < this.pointer2){
+                        this.pointer1 += 1;
+                    }
+
+                    else{
+                        this.pointer -= 1;
+                    }
+                
+                
+                }
+           
+                let left = quickSortAlgorithm(items.slice(0, pointer1));
+                let right = quickSortAlgorithm(items.slice(pointer1 + 1));
+
+                return left + this.items + right;
+           
+            }   
+
+        }
+
+       }
+        
+       const arr1 = new  quickSort([10,9,1,7,4,5,6,8,3,2], 0, 9, 0 )
+
+       console.log(arr1.quickSortAlgorithm())
+       console.log(arr1.items)
+
+
+
+    </script>
+</body>
+</html>

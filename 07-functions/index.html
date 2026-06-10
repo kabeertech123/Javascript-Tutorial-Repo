@@ -10,23 +10,9 @@
 
     <button
       onclick="
+
+      playGame('Rock');
        
-        let result = '';
-
-        const computerMove = pickComputerMove();
-
-        console.log(computerMove) 
-       
-
-        if (computerMove === 'rock') {
-          result = 'Tie.';
-        } else if (computerMove === 'paper') {
-          result = 'You Lose';
-        } else if (computerMove === 'scissors') {
-          result = 'You Win';
-        }
-
-        alert(`You picked rock. Computer picked ${computerMove}. ${result}`);
       "
     >
       Rock
@@ -35,19 +21,7 @@
     <button
       onclick="
 
-      const computerMove = pickComputerMove();
-
-        console.log(computerMove) 
-
-        if (computerMove === 'rock') {
-          result = 'You Win.';
-        } else if (computerMove === 'paper') {
-          result = 'Tie';
-        } else if (computerMove === 'scissors') {
-          result = 'You Lose';
-        }
-
-        alert(`You picked paper. Computer picked ${computerMove}. ${result}`);
+      playGame('paper')
       "
     >
       Paper
@@ -55,7 +29,16 @@
 
     <button
       onclick="
-        
+        playGame('scissors');
+      "
+    >
+      Scissors
+    </button>
+
+    <script>
+
+        function playGame(playerMove){
+
         let result = '';
 
       const computerMove = pickComputerMove();
@@ -71,14 +54,9 @@
         }
 
         alert(
-          `You picked scissors. Computer picked ${computerMove}. ${result}`,
+          `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`,
         );
-      "
-    >
-      Scissors
-    </button>
-
-    <script>
+        }
          
       function pickComputerMove() {
         const randomNumber = Math.random();
