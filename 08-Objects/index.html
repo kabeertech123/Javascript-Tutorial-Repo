@@ -7,73 +7,68 @@
 </head>
 <body>
     <script>
-        
-       class quickSort{
+       
 
-        constructor(items, pointer1, pointer2 , pivot) {
-            this.items = items;
-            this.pointer1 = pointer1;
-            this.pointer2 = pointer2;
-            this.pivot = pivot;
+        const product2 = {
+            name: 'shirt',
+            rating : {
+                stars : 4.5,
+                count: 87
+            },
+            fun: function function1(){
+                console.log('hello')
+            }
+        }
+        // console.log is a method just like product2.fun is a method,
+        // console is the object and log is the function
+
+        
+        console.log(product2['name'])
+
+        product2.fun();
+
+        console.log(JSON.stringify(product2)); 
+
+        const jsonString = JSON.stringify(product2);// converts the product2 into JSON
+
+        console.log(JSON.parse(jsonString));
+
+        /*
+        JSON – Javascript object notation
+
+        a syntax
+
+        basically similar to javascripy obecject buts has less features
+        like no use of funcitons 
+
+        JSON can be understood by most programming language
+
+        local storage – Save values more permenantly, so when you referesh a page, the contents 
+        of variables will not get deleted 
+
+        Both JSON and local storage are built in objects
+
+
+
+        what is autoboxing = when a string or int can use methods by wrapping it in an invisible object
+
+        an object is actually a refernce to its attributes
+
+        */
+
+
+        console.log('hello'.length)
+
+        const object4 = {
+            message: 'hello'
+
         }
 
+        //const message = object4.message
 
-        quickSortAlgorithm(items, pointer1, pointer2, pivot){
+        const {message} = object4;
 
-            if (this.items <= 1){
-                return items;
-            }else{
-                while (this.pointer1 != this.pointer2){
-                    if(
-                    (
-                        this.items[this.pointer1] > this.items[this.pointer2] 
-                        && 
-                        this.pointer1 < this.pointer2)
-                    ||
-                    (
-                        this.items[this.pointer1] < this.items[this.pointer2] 
-                        && this.pointer1 > this.pointer2
-                    )
-                    ){
-                        let temp = this.items[this.pointer1];
-                        this.items[this.pointer1] = this.items[this.pointer2];
-                        this.items[this.pointer2] = temp;
-
-                        let temp_pointer = this.pointer1;
-                        this.pointer1 = this.pointer2;
-                        this.pointer2 = temp_pointer;
-
-                    
-                    }
-                    if(this.pointer1 < this.pointer2){
-                        this.pointer1 += 1;
-                    }
-
-                    else{
-                        this.pointer -= 1;
-                    }
-                
-                
-                }
-           
-                let left = quickSortAlgorithm(items.slice(0, pointer1));
-                let right = quickSortAlgorithm(items.slice(pointer1 + 1));
-
-                return left + this.items + right;
-           
-            }   
-
-        }
-
-       }
-        
-       const arr1 = new  quickSort([10,9,1,7,4,5,6,8,3,2], 0, 9, 0 )
-
-       console.log(arr1.quickSortAlgorithm())
-       console.log(arr1.items)
-
-
-
+        console.log(message)
     </script>
 </body>
 </html>
