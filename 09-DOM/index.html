@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <button>hello</button>
+
+    <button class="js-button">Second button</button>
+
+
+    <script>
+
+        
+        document.querySelector('button')
+            .innerHTML = 'changed again';
+
+           
+
+        let buttonElement = document.querySelector('.js-button').innerHTML = 'hey';
+
+        buttonElement = 'hi'
+
+        console.log(buttonElement);
+
+        /*
+        console.log(document.title);
+
+        console.log(document.body);
+        console.log(typeof document.body); // this will output object
+
+
+        console.log(document.body.innerHTML); // will select all the HTML in the body
+        document.body.innerHTML = '<button>Hello</button>' // u can create new html with this and removes any previous HTML
+
+        /*
+        document.body.innerHTML = 'hello';
+        document.title = 'good job';
+        */
+
+
+    
+
+        //docdsfsment is an object with an attribute and the attribute body is an object with an attribute called innerHTML
+    </script>
+
+
+</body>
+</html>

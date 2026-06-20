@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube Button</title>
+  </head>
+  <body>
+    <h1>Youtube Subscribe Button</h1>
+
+    <button class="js-subscribe-btn" onclick="subscribeBtnLogic()">
+      Subscribe
+    </button>
+
+    <script>
+      function subscribeBtnLogic() {
+        let btnName = document.querySelector(".js-subscribe-btn").innerText;
+
+        if (btnName === "Subscribe") {
+          document.querySelector(".js-subscribe-btn").innerHTML = "Subscribed";
+        } else if (btnName === "Subscribed") {
+          document.querySelector(".js-subscribe-btn").innerHTML = "Subscribe";
+        }
+      }
+    </script>
+  </body>
+</html>
