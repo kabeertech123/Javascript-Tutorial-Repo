@@ -1,27 +1,30 @@
-const todoList = ['Eat Egg mayo', 'Eat Mug Cake'];
-const p = ['p1', 'p2', 'p3']
+const todoList = ["Eat Egg mayo", "Eat Mug Cake"];
 
-let todoListHTML = '';
+renderTodoList();
 
-for (let i = 0; i < todoList.length; i++){
+function renderTodoList() {
+  let todoListHTML = "";
+
+  for (let i = 0; i < todoList.length; i++) {
     const todo = todoList[i];
     const html = `<p>${todo}</p>`;
     todoListHTML += html;
+  }
+
+  document.querySelector(".tasks-div").innerHTML = todoListHTML;
+
+  console.log(todoListHTML);
 }
 
-document.querySelector('.js-odo-list-div').innerHTML = todoListHTML;
+function addTodo() {
+  const newTask = document.querySelector(".js-input").value;
 
-console.log(todoListHTML);
+  todoList.push(newTask);
 
+  console.log(newTask);
 
-function addTodo(){
-    const newTask = document.querySelector('#input-box-2').value
+  document.querySelector(".js-btn").value = "";
 
-    todoList.push(newTask);
-
-    console.log(newTask);
-
-    document.querySelector('#input-box-2').value = '';
-
+  renderTodoList();
 
 }
