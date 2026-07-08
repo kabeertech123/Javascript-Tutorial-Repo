@@ -3,6 +3,7 @@ const arr = [0,1];
 
 function generateNumbers(){
     let lastNumPos = arr.length - 1;
+
     let secondLastNumPos = lastNumPos - 1;
    
     arr.push(arr[lastNumPos] + arr[secondLastNumPos]);

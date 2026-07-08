@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../05-variables"
+		},
+		{
+			"path": "../06-Bools-and-if-statements"
+		},
+		{
+			"path": "../07-functions"
+		},
+		{
+			"path": "../08-Objects"
+		},
+		{
+			"path": "../09-DOM"
+		},
+		{
+			"path": "../11-arrays-and-loops"
+		},
+		{
+			"path": "../Ch3 – JavaScript with HTML & CSS"
+		},
+		{
+			"path": "../Politeness-of-a-number"
+		}
+	],
+	"settings": {}
+}
